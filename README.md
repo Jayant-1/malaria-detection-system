@@ -175,14 +175,16 @@ This project is licensed under the MIT License.
 ## 📞 Contact
 
 **Jayant Potdar**
+
 - 📧 Email: [jayantpotdar2006@gmail.com](mailto:jayantpotdar2006@gmail.com)
 - 📱 Phone: +91 878 864 0172
 - 💼 LinkedIn: [Jayant Potdar](https://www.linkedin.com/in/jayant-potdar-880a461b8/)
 - 🐙 GitHub: [Jayant-1](https://github.com/Jayant-1)
-- 🐦 Twitter: [@Jayantpotdar_](https://x.com/Jayantpotdar_)
+- 🐦 Twitter: [@Jayantpotdar\_](https://x.com/Jayantpotdar_)
 - 📍 Location: Poona Hospital & Research Centre, Pune
 
 **Project Links**
+
 - 🌐 Live Demo: [https://malaria-detection-system.vercel.app/](https://malaria-detection-system.vercel.app/)
 - 📦 Repository: [malaria-detection-system](https://github.com/Jayant-1/malaria-detection-system)
 - 🐛 Issues: [Report Issues](https://github.com/Jayant-1/malaria-detection-system/issues)

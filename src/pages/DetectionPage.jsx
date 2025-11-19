@@ -55,7 +55,6 @@ const DetectionPage = () => {
       }, 400);
 
       // Use predictionService for complete flow (ML API + DB save)
-      // This will create blood_samples → predictions → prediction_details → prediction_history
       const { data: result, error: predictionError } =
         await predictionService.createPrediction({
           imageFile: uploadedFile,
