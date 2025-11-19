@@ -1,166 +1,130 @@
-# 🩺 Malaria Detection System - Web Frontend
+# 🩺 Malaria Detection System
 
-A modern, professional HealthTech web application featuring AI-powered malaria detection for hospitals. Built with React, Vite, TailwindCSS, and Framer Motion.
+A modern web application for hospital-based malaria detection and patient management. Built with React, Vite, Supabase, and TailwindCSS.
 
 ## ✨ Features
 
-### 🎨 Design & User Experience
+### Authentication
 
-- **Clean, Modern Interface** - Professional HealthTech design with smooth animations
-- **Dark/Light Mode** - Seamless theme switching with localStorage persistence
-- **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
-- **Glassmorphism UI** - Modern frosted glass effects and gradient accents
-- **Smooth Animations** - Powered by Framer Motion for fluid interactions
+- Role-based access control (Doctor, Patient, Admin)
+- Supabase JWT authentication for doctors and admins
+- Patient login via medical record number and date of birth
+- Secure session management
 
-### 🔐 Authentication System
-
-- **Role-Based Access** - Support for Doctors, Patients, and Admins
-- **Elegant Forms** - Form validation with visual feedback
-- **Persistent Sessions** - localStorage-based authentication
-
-### 🏥 Role-Specific Dashboards
-
-#### Doctor Dashboard
+### Doctor Features
 
 - Patient management and statistics
-- Weekly test activity charts
-- Monthly trend analysis
-- Recent test results table
-- Today's appointment schedule
+- Upload and manage test results
+- Upload and share PDF reports with patients
+- View analytics and trends
+- Profile and settings management
 
-#### Patient Dashboard
+### Patient Features
 
-- Personal test history timeline
-- Recent test results with detailed notes
-- Upcoming appointments calendar
-- Quick action buttons
-- Health tips and recommendations
+- View posted test results
+- Access and download medical reports
+- Track appointments
+- Manage personal profile
 
-#### Admin Dashboard
+### Admin Features
 
-- User distribution analytics
-- System activity monitoring (24h)
-- Monthly test analytics
-- Recent user management
-- System alerts and notifications
+- User management (doctors, patients, admins)
+- System analytics and monitoring
+- Activity logs and alerts
 
-### 🤖 AI Detection Page
+### Technical Features
 
-- **Drag & Drop Upload** - Intuitive image upload interface
-- **Real-time Progress** - Animated progress bar during analysis
-- **AI Simulation** - Mock AI analysis with realistic processing steps
-- **Professional Results** - Color-coded diagnosis cards with confidence scores
-- **Detailed Reports** - Comprehensive analysis details and metrics
-
-### 📊 Data Visualization
-
-- Interactive charts using Recharts
-- Line charts for trend analysis
-- Bar charts for comparative data
-- Pie charts for distribution
-- Real-time data updates
+- Responsive design (mobile, tablet, desktop)
+- Dark/light mode theme switching
+- PDF report generation with jsPDF
+- Supabase PostgreSQL database
+- Secure file storage for images and PDFs
+- Interactive data visualization with Recharts
 
 ## 🚀 Tech Stack
 
-- **React 19.2.0** - Latest React with concurrent features
-- **Vite 7.2.2** - Lightning-fast build tool
-- **TailwindCSS 4.1.17** - Utility-first CSS framework
-- **Framer Motion 12.23.24** - Production-ready animation library
-- **React Router 7.9.6** - Client-side routing
-- **Recharts 3.4.1** - Composable charting library
-- **Lucide React 0.553.0** - Beautiful icon library
+- **React 19.2.0** - UI framework
+- **Vite 7.2.2** - Build tool
+- **TailwindCSS 3.4.18** - CSS framework
+- **React Router 7.9.6** - Routing
+- **Recharts 3.4.1** - Data visualization
+- **jsPDF 3.0.3** - PDF generation
+- **Supabase** - Backend and database
+- **PostgreSQL** - Database
+- **Supabase Storage** - File storage
 
 ## 📁 Project Structure
 
 ```
-malaria-detection-system-web/
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── Alert.jsx
-│   │   ├── Badge.jsx
-│   │   ├── Button.jsx
-│   │   ├── Card.jsx
-│   │   ├── FeatureCard.jsx
-│   │   ├── Footer.jsx
-│   │   ├── ImageUpload.jsx
-│   │   ├── Input.jsx
-│   │   ├── LoadingSpinner.jsx
-│   │   ├── Modal.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── ProgressBar.jsx
-│   │   ├── ResultCard.jsx
-│   │   ├── Sidebar.jsx
-│   │   ├── StatCard.jsx
-│   │   └── TestimonialCard.jsx
-│   ├── contexts/            # React contexts
-│   │   ├── AuthContext.jsx
-│   │   └── ThemeContext.jsx
-│   ├── pages/              # Page components
-│   │   ├── AdminDashboard.jsx
-│   │   ├── DetectionPage.jsx
-│   │   ├── DoctorDashboard.jsx
-│   │   ├── HomePage.jsx
-│   │   ├── LoginPage.jsx
-│   │   ├── NotFoundPage.jsx
-│   │   ├── PatientDashboard.jsx
-│   │   └── RegisterPage.jsx
-│   ├── App.jsx             # Main app component
-│   ├── main.jsx            # Entry point
-│   └── index.css           # Global styles
-├── public/                 # Static assets
-├── index.html             # HTML template
-├── package.json           # Dependencies
-├── tailwind.config.js     # Tailwind configuration
-├── vite.config.js         # Vite configuration
-└── README.md              # Documentation
+src/
+├── components/       # Reusable UI components
+├── contexts/         # Authentication and theme contexts
+├── pages/           # Page components
+│   ├── admin/       # Admin pages
+│   ├── doctor/      # Doctor pages (patients, reports, test results)
+│   └── patient/     # Patient pages (my results, my reports)
+├── services/        # API services and business logic
+├── utils/           # Utility functions (PDF generation)
+└── App.jsx          # Main application
 ```
 
-## 🎨 Design System
+## 🛠️ Installation & Setup
 
-### Color Palette
+### Prerequisites
 
-- **Primary**: Blue spectrum (#1890ff) - Trust and professionalism
-- **Secondary**: Teal spectrum (#13c2c2) - Healthcare and vitality
-- **Success**: Green for positive results
-- **Danger**: Red for alerts and positive malaria cases
-- **Warning**: Yellow for pending states
+- Node.js 18+ and npm
+- Supabase account (free tier available at [supabase.com](https://supabase.com))
 
-### Typography
-
-- **Body Font**: Inter - Modern, highly readable
-- **Display Font**: Poppins - Bold, impactful headings
-
-### UI Elements
-
-- Glassmorphism panels with backdrop blur
-- Gradient accents and text effects
-- Rounded corners (0.5rem - 1rem)
-- Subtle shadows and hover effects
-- 300ms transition animations
-
-## 🛠️ Installation
-
-1. **Clone the repository**
+### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Jayant-1/malaria-detection-system.git
 cd malaria-detection-system-web
 ```
 
-2. **Install dependencies**
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-3. **Start development server**
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+**Getting Supabase Credentials:**
+
+1. Create a project at [supabase.com](https://supabase.com)
+2. Go to Project Settings → API
+3. Copy the Project URL and anon/public key
+
+### 4. Set Up Supabase Database
+
+Create the following tables in Supabase SQL Editor:
+
+- `patients` - Store patient information
+- `test_results` - Store test results with posting status
+- `reports` - Store PDF report metadata
+
+Create storage buckets:
+
+- `malaria-images` - For test images
+- `reports` - For PDF reports
+
+### 5. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-4. **Open in browser**
-   Navigate to `http://localhost:5173`
+### 6. Open in Browser
+
+Navigate to `http://localhost:5173`
 
 ## 📝 Available Scripts
 
@@ -171,136 +135,46 @@ npm run preview      # Preview production build
 npm run lint         # Run ESLint
 ```
 
-## 🎯 Usage Guide
+## 🎯 Usage
 
-### For Doctors
+### Doctors
 
-1. Register/Login with Doctor role
-2. Access Doctor Dashboard
-3. View patient statistics and charts
-4. Upload blood samples for detection
-5. Review test results and manage patients
+- Login with Supabase credentials
+- Manage patients and view statistics
+- Upload and post test results to patients
+- Upload and share PDF reports
+- View analytics and trends
 
-### For Patients
+### Patients
 
-1. Register/Login with Patient role
-2. Access Patient Dashboard
-3. View personal test history
-4. Request new tests
-5. Track appointments and results
+- Login with Medical Record Number + Date of Birth
+- View posted test results
+- Download medical reports
+- Track appointments
 
-### For Administrators
+### Admins
 
-1. Login with Admin role
-2. Access Admin Dashboard
-3. Monitor system activity
-4. Manage users and permissions
-5. View analytics and reports
+- Manage users (doctors, patients, admins)
+- Monitor system activity and analytics
+- Review system logs and alerts
 
-## 🔒 Security Features
+## 🔒 Security
 
-- Client-side authentication with role-based access
-- localStorage for session persistence
-- HIPAA-compliant design patterns
-- Secure form validation
-- XSS protection through React
-
-## 🎭 Mock Data
-
-The application currently uses mock data for demonstration:
-
-- Simulated AI analysis (3-4 seconds)
-- Random positive/negative results (70/30 split)
-- Mock charts and statistics
-- Sample patient and test data
-
-## 🚀 Future Enhancements
-
-- [ ] Backend API integration
-- [ ] Real AI model connection
-- [ ] JWT authentication
-- [ ] WebSocket for real-time updates
-- [ ] PDF report generation
-- [ ] Email notifications
-- [ ] Advanced analytics
-- [ ] Multi-language support
-- [ ] PWA capabilities
-- [ ] Enhanced accessibility (WCAG 2.1)
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 640px
-- **Tablet**: 640px - 1024px
-- **Desktop**: > 1024px
-
-## 🎨 Customization
-
-### Updating Colors
-
-Edit `tailwind.config.js`:
-
-```js
-theme: {
-  extend: {
-    colors: {
-      primary: { /* your colors */ },
-      teal: { /* your colors */ }
-    }
-  }
-}
-```
-
-### Changing Fonts
-
-Update Google Fonts import in `src/index.css`
-
-### Adding New Routes
-
-1. Create page component in `src/pages/`
-2. Add route in `src/App.jsx`
-3. Update navigation in `Navbar.jsx`
-
-## 🐛 Known Issues
-
-- ESLint warnings for unused motion imports (cosmetic)
-- Mock data only - backend integration pending
-
-## 👥 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+- JWT-based authentication via Supabase
+- Row-level security (RLS) policies
+- Role-based access control
+- Secure file storage with access policies
+- Environment variable protection
 
 ## 📄 License
 
 This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
+## 📞 Contact
 
-- Design inspiration from modern healthcare platforms
-- Icons by Lucide React
-- Charts powered by Recharts
-- Animations by Framer Motion
-
-## 📞 Support
-
-For questions or support, please contact:
-
-- Email: contact@malariadetection.ai
-- Website: Coming soon
+- GitHub: [Jayant-1/malaria-detection-system](https://github.com/Jayant-1/malaria-detection-system)
+- Issues: [Report Issues](https://github.com/Jayant-1/malaria-detection-system/issues)
 
 ---
 
-**Built with ❤️ for Healthcare Innovation**
-
-_Malaria Detection AI - Empowering Hospitals with Advanced Diagnostics_
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Malaria Detection System - Hospital Patient Management Platform**
