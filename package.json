@@ -1,7 +1,14 @@
 {
   "name": "malaria-detection-system-web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "AI-powered malaria detection system for hospitals with patient management and PDF report generation",
+  "author": "Jayant Potdar <jayantpotdar2006@gmail.com>",
+  "homepage": "https://malaria-detection-system.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jayant-1/malaria-detection-system.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",

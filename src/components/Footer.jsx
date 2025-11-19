@@ -41,9 +41,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Github, href: "https://github.com/Jayant-1", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/jayant-potdar-880a461b8/", label: "LinkedIn" },
+    { icon: Twitter, href: "https://x.com/Jayantpotdar_", label: "Twitter" },
   ];
 
   return (
@@ -160,10 +160,10 @@ const Footer = () => {
               <div>
                 <p className="text-sm font-medium text-white">Email</p>
                 <a
-                  href="mailto:contact@malariadetection.ai"
+                  href="mailto:jayantpotdar2006@gmail.com"
                   className="text-sm hover:text-primary-400 transition-colors"
                 >
-                  contact@malariadetection.ai
+                  jayantpotdar2006@gmail.com
                 </a>
               </div>
             </div>
@@ -172,10 +172,10 @@ const Footer = () => {
               <div>
                 <p className="text-sm font-medium text-white">Phone</p>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+918788640172"
                   className="text-sm hover:text-primary-400 transition-colors"
                 >
-                  +1 (234) 567-890
+                  +91 878 864 0172
                 </a>
               </div>
             </div>
@@ -183,7 +183,7 @@ const Footer = () => {
               <MapPin className="w-5 h-5 text-primary-400 mt-0.5" />
               <div>
                 <p className="text-sm font-medium text-white">Location</p>
-                <p className="text-sm">Medical District, Healthcare City</p>
+                <p className="text-sm">Poona Hospital & Research Centre, Pune</p>
               </div>
             </div>
           </div>
